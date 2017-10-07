@@ -1,0 +1,23 @@
+.wrap {
+	width: 600px;
+	height: 600px;
+	border: 2px solid #000;
+	margin-bottom: 10px;
+
+}
+
+.wrap div {
+	border-radius: 10px;
+	float: left;
+	width: 180px;
+	height: 180px;
+	margin: 10px;
+	background-color: orange;
+}
+input {
+	display: block;
+	width: 604px;
+	height: 30px;
+	font: 20px/30px "微软雅黑";
+	margin-bottom: 10px;
+}
