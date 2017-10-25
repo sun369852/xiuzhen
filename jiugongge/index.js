@@ -33,10 +33,11 @@ function ranColor() {
 }
 var timer = null;
 var isBling = false;
-function changeColor(){
+bling.onclick = function () {
 	if (isBling) {
 		return;
 	}
+	isBling = true;
 	timer = setInterval(function () {
 		for (var i = 0; i < divs.length; i++) {
 			divs[i].style["background-color"] = "orange";
@@ -48,10 +49,6 @@ function changeColor(){
 		}
 	},1000)
 }
-bling.onclick = function () {
-	changeColor();
-	isBling = true;
-}
 noBling.onclick = function () {
 	isBling = false;
 	clearInterval(timer);
@@ -59,26 +56,3 @@ noBling.onclick = function () {
 		divs[i].style["background-color"] = "orange";
 	}
 }
-//bling.onclick = function () {
-////	if (isBling) {
-////		return;
-////	}
-////	isBling = true;
-////	timer = setInterval(function () {
-////		for (var i = 0; i < divs.length; i++) {
-////			divs[i].style["background-color"] = "orange";
-////		}
-////		arr = [];
-////		ranNum(3,9);
-////		for (var i = 0; i < arr.length; i++) {
-////			divs[arr[i]].style["background-color"] = ranColor();
-////		}
-////	},1000)
-//}
-//noBling.onclick = function () {
-////	isBling = false;
-//	clearInterval(timer);
-//	for (var i = 0; i < divs.length; i++) {
-//		divs[i].style["background-color"] = "orange";
-//	}
-//}
