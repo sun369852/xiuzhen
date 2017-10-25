@@ -34,8 +34,9 @@ function ranColor() {
 var timer = null;
 var isBling = false;
 function changeColor(){
-	
-	clearInterval(timer);
+	if (isBling) {
+		return;
+	}
 	timer = setInterval(function () {
 		for (var i = 0; i < divs.length; i++) {
 			divs[i].style["background-color"] = "orange";
@@ -49,10 +50,10 @@ function changeColor(){
 }
 bling.onclick = function () {
 	changeColor();
-//	isBling = true;
+	isBling = true;
 }
 noBling.onclick = function () {
-//	isBling = false;
+	isBling = false;
 	clearInterval(timer);
 	for (var i = 0; i < divs.length; i++) {
 		divs[i].style["background-color"] = "orange";
